@@ -14,16 +14,21 @@
 
     <div class="container">
         <ul class="nav nav-tabs">
-        <li><%= link_to "Facebook" %></li>
-        <li><%= link_to "Twitter" %></li>
-        <li><%= link_to "Instagram" %></li>
+        <li><%= link_to "Etusivu", root_path %></li>
+            <li><%= link_to "Facebook"%></li>
+        <li><%= link_to 'My Blog', controller: 'articles' %></li>
+            <li><a href="http://Facebook.com">Facebook linkki</a></li>
+            
     </ul>
     </div>
+
+ <div id="main-container" class="container">
+      <div class="row">
+        <div class="col-xs-3"> 
     
-    <h1> ARAM MAALIKUNINGASTILANNE</h1>
-    
-    <h1>Klaus 2</h1> Anton 6
 <%= yield %>
+            
+          </div>
 
 </body>
 </html>

@@ -5,6 +5,58 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+    
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to 'Home', root_path, class: 'navbar-brand' %>
+    </div>
+      
+        
+       <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+                      <% if current_user %>
+                      <li><%= link_to 'Sign out', sign_out %></li>
+                      <% else %>
+                      <li><%= link_to 'Sign in', "auth/facebook" %></li>
+                    <% end %>
+                     
+            </ul>
+                
+        </div>
+
+           
+        </div>
+     
+     
+     
+ 
+    
+    
+    
+    </nav>   
+    
+<!--
   <script>
   window.fbAsyncInit = function() {
       FB.init({
@@ -22,12 +74,9 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>  
+-->
     
-  <title>Blog</title>
-  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
+
 <body>
 
     <div class="container">
@@ -36,12 +85,16 @@
             <li><%= link_to "Facebook"%></li>
         <li><%= link_to 'My Blog', controller: 'articles' %></li>
             <li><a href="http://Facebook.com">Facebook linkki</a></li>
+            <li><%= link_to "Sign in with Facebook", "/auth/facebook" %></li>
+        
+<!--
             <li><div
   class="fb-like"
   data-share="true"
   data-width="450"
   data-show-faces="true">
 </div></li>
+-->
             
     </ul>
     </div>
@@ -51,6 +104,9 @@
         <div class="col-xs-3"> 
     
 <%= yield %>
+            
+        
+            
             
           </div>
 

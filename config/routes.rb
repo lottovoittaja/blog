@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  root 'home#index'
+
+  get 'profile' => 'home#profile'
+
+    get 'auth/:provider/callback', to: "sessions#create"
+    
+    delete 'sign_out', to: "sessions#destroy", as: 'sign_out'
+ ####### get 'welcome/index'
+    
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -10,7 +18,8 @@ Rails.application.routes.draw do
 end
     
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+ # root 'welcome#index'
+    
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -60,3 +69,12 @@ end
   #     resources :products
   #   end
 end
+#
+#Webapp::Application.routes.draw do
+#  get 'home/index'
+#
+#  get 'home/profile'
+
+#     match '/auth/:provider/callback', to: 'sessions#create'
+#     root :to => 'application#home'
+#   end

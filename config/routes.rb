@@ -1,12 +1,31 @@
 Rails.application.routes.draw do
-  root 'home#index'
 
-  get 'profile' => 'home#profile'
-
-    get 'auth/:provider/callback', to: "sessions#create"
     
-    delete 'sign_out', to: "sessions#destroy", as: 'sign_out'
+ # This route sends requests to our naked url to the *cool* action in the *gif* controller.
+    root to: 'welcome#index'
+
+ # these routes are for showing users a login form, logging them in, and logging them out.
+  get '/login' => 'sessions2#new'
+  post '/login' => 'sessions2#create'
+  get '/logout' => 'sessions2#destroy'
+
+  get '/signup' => 'kayttaja#new'
+  post '/kayttaja' => 'kayttaja#create'
+    
+    
+    
+    
+    #  root 'home#index'
+#
+#  get 'profile' => 'home#profile'
+#
+#    get 'auth/:provider/callback', to: "sessions#create"
+#    
+#    delete 'sign_out', to: "sessions#destroy", as: 'sign_out'
  ####### get 'welcome/index'
+    
+    
+    
     
 
   # The priority is based upon order of creation: first created -> highest priority.

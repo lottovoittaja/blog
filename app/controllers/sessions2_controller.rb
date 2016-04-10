@@ -21,7 +21,7 @@ class Sessions2Controller < ApplicationController
 
   def destroy
     session[:kayttaja_id] = nil
-    redirect_to '/login'
+    redirect_to '/'
   end
     
 end

@@ -1,11 +1,10 @@
 <div id="main-container" class="container">
       <div class="row">
         
-        
-
-<h2>Tervetuloa vierailija!</h2>
+     <div class="col-xs-8">
+          <h2>Tervetuloa vierailija!</h2>
             <p>
-            Tervetuloa Klausin rakennustyömaalle.
+            Tervetuloa Klausin rakennustyömaalle. Tästä rakentuu jatkossa lisäosa Klausin Linkedinille, joka osoittaa hiukan teknistä osaamista.
             Tämä on toteutettu <a href="http://iislab.ee.tut.fi/piiri/groups/ohjelmallinen-sis%C3%A4ll%C3%B6nhallinta-2016"> ohjelmallisen sisällön
                 hallinnan</a> kurssia varten.
                 <p>
@@ -21,9 +20,22 @@
           <p>Email: markus 
           <p>Password: markus</p>
           </p>
-            
-            
-            
+          
+          <!-- joopa joo. tuskin toimii --> 
+          <h1>Linkedin Application</h1>
+<a href="/linkedin_oauth_url" class="btn btn-primary btn-larg">Connect to LinkedIn</a>
+          <%= @nimi %>
+          
+        </div>
+           
+<div class="col-xs-4">
+
+        <h3>Klaus twitterissä, to be changed</h3>    
+    <a class="twitter-timeline" href="https://twitter.com/OP_Ryhma" data-widget-id="718728891490254848">Tweets by @OP_Ryhma</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+         
+    </div>  
             
             
 <!--            %= link_to 'Täällä pääset kirjoittamaan blogin merkeissä kuulumisia', controller: 'articles' %>-->

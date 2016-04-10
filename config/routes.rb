@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
 
     
+  devise_for :users
  # This route sends requests to our naked url to the *cool* action in the *gif* controller.
-    root to: 'welcome#index'
+  # root to: 'welcome#index'
+    
+    root :to => 'welcome#index'
+  resources :linkedin
+    get '/linkedin_profile' => "linkedin#linkedin_profile"
+    get '/oauth_account' => "linkedin#oauth_account"
+    get '/linkedin_oauth_url' => 'linkedin#generate_linkedin_oauth_url'
+    
 
  # these routes are for showing users a login form, logging them in, and logging them out.
   get '/login' => 'sessions2#new'
@@ -34,6 +42,10 @@ Rails.application.routes.draw do
      # Example resource route (maps HTTP verbs to controller actions automatically):
     resources :articles do
     resources :comments
+        
+   
+        
+end
 end
     
   # You can have the root of your site routed with "root"
@@ -87,9 +99,10 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
 #
 #Webapp::Application.routes.draw do
+  
 #  get 'home/index'
 #
 #  get 'home/profile'

@@ -3,8 +3,15 @@ source 'https://rubygems.org'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
+#Tassa on linkedinin gemit
+gem 'devise'
+gem 'linkedin'
+gem 'twitter-bootstrap-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
+
+gem 'picture_tag-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

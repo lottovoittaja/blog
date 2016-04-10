@@ -127,8 +127,6 @@ GEM
       omniauth-oauth (~> 1.1)
     orm_adapter (0.5.0)
     pg (0.18.4-x86-mingw32)
-    picture_tag-rails (0.0.5)
-      rails (>= 3.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -224,7 +222,6 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-twitter
   pg
-  picture_tag-rails
   rails (= 4.2.5.1)
   rails_12factor
   sass-rails (~> 5.0)

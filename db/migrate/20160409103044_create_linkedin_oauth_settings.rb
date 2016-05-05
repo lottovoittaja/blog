@@ -1,6 +1,6 @@
 class CreateLinkedinOauthSettings < ActiveRecord::Migration
   def change
-    create_table :linkedin_oauth_settings do |t|
+    create_table :linkedin_oauth_setting do |t|
       t.string :atoken
       t.string :asecret
       t.integer :user_id

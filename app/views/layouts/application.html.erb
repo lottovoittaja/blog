@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77322804-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 <head>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -15,18 +27,16 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     
   <title>KlausApp</title>
-  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+
 </head>
 
     <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Rakennustyömaa</a>
+      <a class="navbar-brand" href="/">Osaamisen portfolio</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href='/'>Etusivu</a></li>
+      <li><a href='/'>Etusivu</a></li>
       <li><a href="/articles">Blogi</a></li>
       <li><a href="#">FAQ</a></li> 
       <li><a href="#">Testi</a></li>
@@ -37,11 +47,13 @@
     <ul class="nav navbar-nav navbar-right">
         
         <% if current_kayttaja %>
-        
+
        <li> Kirjautumisnimi: <%= current_kayttaja.name %> </li> | <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Kirjaudu ulos</a> </li>
-        
-        <% else %>
-        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Kirjaudu sisään</a></li> | 
+
+
+          <% else %>
+        <li><a href="/linkedin_oauth_url"><span class="glyphicon glyphicon-log-in"></span> Kirjaudu LinkedIn-tilillä</a></li> |
+        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Kirjaudu sisään</a></li> |
         <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Rekisteröidy</a></li>
         <% end %> 
           

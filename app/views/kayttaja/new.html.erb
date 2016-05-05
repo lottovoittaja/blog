@@ -4,10 +4,10 @@
 
 <%= form_for :kayttaja, url: '/kayttaja' do |f| %>
 
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
+  Name: <%= f.text_field :name, :placeholder => "esim. etunimi" %>
+  Email: <%= f.text_field :email, :placeholder => "sähköpostiosoitteesi" %>
+  Password: <%= f.password_field :password, :placeholder => "luo uusi salasana" %>
+  Password Confirmation: <%= f.password_field :password_confirmation, :placeholder => "toista salasana" %>
   <%= f.submit "Submit" %>
 
 <% end %>

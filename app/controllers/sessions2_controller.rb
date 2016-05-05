@@ -20,7 +20,7 @@ class Sessions2Controller < ApplicationController
   end
 
   def destroy
-    session[:kayttaja_id] = nil
+    session[:kayttaja_id] = nil #|| session[:rtoken] = nil
     redirect_to '/'
   end
     

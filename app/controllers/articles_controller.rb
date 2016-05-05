@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
  
     if @article.save
-      redirect_to @article
+      redirect_to articles_path
     else
       render 'new'
     end
@@ -41,15 +41,34 @@ class ArticlesController < ApplicationController
     end
   end
  
-  def destroy
-    @article = Article.find(params[:id])
-    @article.destroy
- 
-    redirect_to articles_path
-  end
+   def destroy
+     @article = Article.find(params[:id])
+     @article.destroy
+
+     redirect_to articles_path
+   end
+
+# # DELETE /articles/1
+# # DELETE /articles/1.json
+#   def destroy
+#     @article = Article.find(params[:id])
+#     @article.destroy
+#
+#     respond_to do |format|
+#       format.html { redirect_to @article }
+#       format.json { head :no_content }
+#       format.js   { render :layout => false }
+#     end
+#
+#   end
+
  
   private
-    def article_params
+#   def set_article
+#     @pony = Pony.find(params[:id])
+# end
+
+  def article_params
       params.require(:article).permit(:title, :text)
     end
 end

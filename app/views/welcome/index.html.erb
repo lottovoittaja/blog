@@ -9,14 +9,24 @@
                 hallinnan</a> kurssia varten.
                 <p>
             <b> Pääset selailemaan blogipäivityksiä vain luomalla tunnukset/kirjautumalla sisään.</b><p>
-            Toistaiseksi sivuilta löytyy seuraavat ominaisuudet:<p>
+
+
+
+       <canvas id="myCanvas" width="500" height="100" style="border:1px solid #d3d3d3;">
+         Your browser does not support the HTML5 canvas tag.</canvas>
+
+       <script>
+         var c = document.getElementById("myCanvas");
+         var ctx = c.getContext("2d");
+         ctx.font = "20px Arial";
+         ctx.fillText("Sivuilta löytyvät seuraavat ominaisuudet",10,50);
+       </script>
+       <p>
                     - sisäänkirjautuminen <p>
                     - blogi päivitykset (CRUD-ominaisuuksilla)<p>
           <p>
-            <h2>Tänään nimipäiviään viettelee Nella! Onneksi olkoon</h2>
-       <p> tässä vielä lempi-Nellalle onnittelut! wuhuu</p>
-            <img src="/images/nella.jpg" alt="Nella" />
-           <p>
+            </canvas>
+
        <p>
 
             Voit luoda tunnukset mielivaltaisesti. En pysty takaamaan tunnuksien tietoturvallista käsittelyä...<p>
@@ -29,7 +39,7 @@
           <!-- joopa joo. tuskin toimii --> 
           <h1>Linkedin Application</h1>
 <a href="/linkedin_oauth_url" class="btn btn-primary btn-larg">Connect to LinkedIn</a>
-          <%= @nimi %>
+       <%= @nimi %>
           
         </div>
            
@@ -38,6 +48,7 @@
         <h3>Klaus twitterissä, to be changed</h3>    
     <a class="twitter-timeline" href="https://twitter.com/OP_Ryhma" data-widget-id="718728891490254848">Tweets by @OP_Ryhma</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
 
          
     </div>  

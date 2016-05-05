@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   get '/signup' => 'kayttaja#new'
   post '/kayttaja' => 'kayttaja#create'
+
+  get 'remove_oauth' => 'linkedin#remove_oauth'
     
     
     
